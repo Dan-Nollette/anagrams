@@ -25,11 +25,11 @@ describe('anagram_checker') do
         expect(Anagram_checker.anagrams_check({word1: "WV", word2: "VW"})).to(eq("You need to input actual words!"))
     end
   end
-  # describe('.anagrams_check') do
-  #   it('checks if non anagrams are antigrams.') do
-  #     expect(Anagram_checker.anagrams_check({word1: "ruby", word2: "damp"})).to(eq("These words have no letter matches and are antigrams."))
-  #   end
-  # end
+  describe('.anagrams_check') do
+    it('checks if non anagrams are antigrams.') do
+      expect(Anagram_checker.anagrams_check({word1: "ruby", word2: "damp"})).to(eq("These words have no letter matches and are antigrams."))
+    end
+  end
   # describe('.anagrams_check') do
   #   it('ignores spacing and punctuation to only consider letters in a multiword phrase.') do
   #     expect(Anagram_checker.anagrams_check({word1: "Dan Nollette", word2: "Nellda T Note"})).to(eq("Yes, those are anagrams"))

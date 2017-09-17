@@ -10,10 +10,13 @@ class Anagram_checker
       return "Yes, those are anagrams, and also form a palindrome"
     elsif (letters1 == letters2)
       return "Yes, those are anagrams"
+    elsif are_antigrams?(letters1, letters2)
+      return "These words have no letter matches and are antigrams."
     else
       "Sorry, those aren't anagrams"
     end
   end
+
   def self.has_vowels?(letters)
     letters.each do |letter|
       if (letter == "a" || letter == "e" || letter == "i" || letter == "o" || letter == "u" || letter == "y")
@@ -21,5 +24,16 @@ class Anagram_checker
       end
     end
     return false
+  end
+
+  def self.are_antigrams?(letters1, letters2)
+    letters1.each do |letter1|
+      letters2.each do |letter2|
+        if letter1 == letter2
+          return false
+        end
+      end
+    end
+    return true
   end
 end
