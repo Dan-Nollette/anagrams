@@ -4,10 +4,12 @@ class Anagram_checker
     word2 = parameters.fetch(:word2)
     letters1 = word1.downcase.split("").sort
     letters2 = word2.downcase.split("").sort
-    if (letters1 == letters2)
+    if word1.downcase.reverse == word2.downcase()
+      return "Yes, those are anagrams, and also form a palindrome"
+    elsif (letters1 == letters2)
       return "Yes, those are anagrams"
     else
-      return "Sorry, those aren't anagrams"
+      "Sorry, those aren't anagrams"
     end
   end
 end

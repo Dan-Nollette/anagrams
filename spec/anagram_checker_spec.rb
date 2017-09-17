@@ -15,11 +15,11 @@ describe('anagram_checker') do
       expect(Anagram_checker.anagrams_check({word1: "Ruby", word2: "Bury"})).to(eq("Yes, those are anagrams"))
     end
   end
-  # describe('.anagrams_check') do
-  #   it('checks if two anagrams are also form a palindrome, returning an explanatory string.') do
-  #     expect(Anagram_checker.anagrams_check({word1: "Eat", word2: "Tea"})).to(eq("Yes, those are anagrams, and also form a palindrome"))
-  #   end
-  # end
+  describe('.anagrams_check') do
+    it('checks if two anagrams are also form a palindrome, returning an explanatory string.') do
+      expect(Anagram_checker.anagrams_check({word1: "ETA", word2: "Ate"})).to(eq("Yes, those are anagrams, and also form a palindrome"))
+    end
+  end
   # describe('.anagrams_check') do
   #   it('checks if inputs are words (contain vowels).') do
   #       expect(Anagram_checker.anagrams_check({word1: "WV", word2: "VW"})).to(eq("You need to input actual words!"))
