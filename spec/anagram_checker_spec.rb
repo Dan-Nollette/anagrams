@@ -20,11 +20,11 @@ describe('anagram_checker') do
       expect(Anagram_checker.anagrams_check({word1: "ETA", word2: "Ate"})).to(eq("Yes, those are anagrams, and also form a palindrome"))
     end
   end
-  # describe('.anagrams_check') do
-  #   it('checks if inputs are words (contain vowels).') do
-  #       expect(Anagram_checker.anagrams_check({word1: "WV", word2: "VW"})).to(eq("You need to input actual words!"))
-  #   end
-  # end
+  describe('.anagrams_check') do
+    it('checks if inputs are words (contain vowels).') do
+        expect(Anagram_checker.anagrams_check({word1: "WV", word2: "VW"})).to(eq("You need to input actual words!"))
+    end
+  end
   # describe('.anagrams_check') do
   #   it('checks if non anagrams are antigrams.') do
   #     expect(Anagram_checker.anagrams_check({word1: "ruby", word2: "damp"})).to(eq("These words have no letter matches and are antigrams."))
