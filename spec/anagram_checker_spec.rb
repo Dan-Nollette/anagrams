@@ -10,11 +10,11 @@ describe('anagram_checker') do
       expect(Anagram_checker.anagrams_check({word1: "ruby", word2: "bury"})).to(eq("Yes, those are anagrams"))
     end
   end
-  # describe('.anagrams_check') do
-  #   it('accounts for the possibility that words might have different cases but should still be anagrams.') do
-  #     expect(Anagram_checker.anagrams_check({word1: "Ruby", word2: "Bury"})).to(eq("Yes, those are anagrams"))
-  #   end
-  # end
+  describe('.anagrams_check') do
+    it('accounts for the possibility that words might have different cases but should still be anagrams.') do
+      expect(Anagram_checker.anagrams_check({word1: "Ruby", word2: "Bury"})).to(eq("Yes, those are anagrams"))
+    end
+  end
   # describe('.anagrams_check') do
   #   it('checks if two anagrams are also form a palindrome, returning an explanatory string.') do
   #     expect(Anagram_checker.anagrams_check({word1: "Eat", word2: "Tea"})).to(eq("Yes, those are anagrams, and also form a palindrome"))
