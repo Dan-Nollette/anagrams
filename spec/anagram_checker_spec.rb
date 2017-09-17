@@ -16,7 +16,7 @@ describe('anagram_checker') do
     end
   end
   describe('.anagrams_check') do
-    it('checks if two anagrams are also form a palindrome, returning an explanatory string'.) do
+    it('checks if two anagrams are also form a palindrome, returning an explanatory string.') do
       expect(Anagram_checker.anagrams_check({word1: "Eat", word2: "Tea"})).to(eq("Yes, those are anagrams, and also form a palindrome"))
     end
   end
