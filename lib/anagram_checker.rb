@@ -1,17 +1,17 @@
 class Anagram_checker
   def self.anagrams_check(parameters)
-    phrase1 = parameters.fetch(:phrase1).downcase
-    phrase2 = parameters.fetch(:phrase2).downcase
-    (phrase1.split(" ").concat(phrase2.split(" "))).each do |word|
+    @phrase1 = parameters.fetch(:phrase1).downcase
+    @phrase2 = parameters.fetch(:phrase2).downcase
+    (@phrase1.split(" ").concat(@phrase2.split(" "))).each do |word|
       unless has_vowels?(word.split"")
         return "You need to input actual words!"
       end
     end
-    phrase1 = letters_only(phrase1)
-    phrase2 = letters_only(phrase2)
-    letters1 = phrase1.split("").sort
-    letters2 = phrase2.split("").sort
-    if phrase1.reverse == phrase2
+    @phrase1 = letters_only(@phrase1)
+    @phrase2 = letters_only(@phrase2)
+    letters1 = @phrase1.split("").sort
+    letters2 = @phrase2.split("").sort
+    if @phrase1.reverse == @phrase2
       return "Yes, those are anagrams, and also form a palindrome"
     elsif (letters1 == letters2)
       return "Yes, those are anagrams"
